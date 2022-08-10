@@ -14,15 +14,24 @@
 
 <body>
   <h1>App</h1>
+  <div id="form"></div>
   <div id="list"></div>
-  
+
+  <script id="userForm" type="text/template">
+   <input type='text' id='name-input'>
+   <br>
+   <input type='text' id='age-input'>
+   <br>
+   <button type='button' id='add-btn' class="btn btn-primary">Add User</button>
+  </script>
+  <br>
+
   <script id="userView" type="text/template">
-  <!-- <input type='text'> -->
   <li>{{name}}</li>
   <li>{{age}}</li>
-</script>
+  </script>
 
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>

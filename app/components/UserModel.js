@@ -1,12 +1,7 @@
 import Backbone from 'backbone'
 
-var UserModel = new Backbone.Model(
-    {
-        
-            name: 'mohit',
-            age: 23
-        
-    }
+var UserModel = Backbone.Model.extend(
+{}
 )
 
 export default UserModel
