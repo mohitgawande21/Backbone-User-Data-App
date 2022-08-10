@@ -6,44 +6,49 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <meta name="viewport"
     content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <title>MarionetteJS</title>
- 
+
 </head>
 
 <body>
   <div id="form"></div>
   <div id="list"></div>
 
-  <script id="formView" type="text/template">
+  <div class="container">
+    <script id="formView" type="text/template" >
       <h2>New user:</h2>
           <p>
             <label for="name">Name: </label>
+            <br>
             <input type="text" id="name">
           </p>
           <p>
             <label for="age">Age: </label>
+            <br>
             <input type="text" id="age">
           </p>
-          <button id='create'>Create</button>
-          <button id='click'>click</button>
+          <button class='btn btn-primary' id='create'>Create</button>
+          <!-- <button class='btn btn-primary' id='click'>click</button> -->
         </script>
 
-
-  <script id="userView" type="text/template">
+  </div>
+  <script id="userView" type="text/template" class="container">
     <br>
     Name:<strong id='name-p'> {{name}}</strong>
     <br>
     Age:<strong id='age-p'> {{age}}</strong>
     <br>
-      <button class='edit'>edit</button>
-      <button class='delete'>delete</button>
-      <button class="update" style="display:none" >update</button>
+      <button  class='edit btn btn-primary'>edit</button>
+      <button  class='delete btn btn-danger'>delete</button>
+      <button  class="update btn btn-warning" style="display:none" >update</button>
     </script>
 
   <script id="noUsersView" type="text/template">
       <h2>No Users</h2>
     </script>
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
