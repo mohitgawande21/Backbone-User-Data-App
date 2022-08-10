@@ -1,5 +1,7 @@
-import Backbone from "backbone"
+import Backbone from 'backbone'
 
-const UserModel = Backbone.Model.extend({})
+var UserModel= Backbone.Model.extend({
+  
+})
 
 export default UserModel

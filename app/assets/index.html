@@ -13,42 +13,16 @@
 </head>
 
 <body>
-  <div class="d-flex justify-content-center" id="form"></div>
-  <div class="d-flex justify-content-center" id="list"></div>
+  <h1>App</h1>
+  <div id="list"></div>
+  
+  <script id="userView" type="text/template">
+  <!-- <input type='text'> -->
+  <li>{{name}}</li>
+  <li>{{age}}</li>
+</script>
 
-  <div >
-    <script id="formView" type="text/template">
-         <h2 class='text-center'>New user:</h2>
-          <p>
-            <label for="name">Name: </label>
-            <br>
-            <input type="text" id="name">
-          </p>
-          <p>
-            <label for="age">Age: </label>
-            <br>
-            <input type="text" id="age">
-          </p>
-          <button class='btn btn-primary' id='create'>Create</button>
-          <!-- <button class='btn btn-primary' id='click'>click</button> -->
-        </script>
-
-  </div>
-  <script id="userView" type="text/template" class="container">
-    <br>
-    Name:<strong id='name-p'> {{name}}</strong>
-    <br>
-    Age:<strong id='age-p'> {{age}}</strong>
-    <br>
-      <button  class='edit btn btn-primary'>edit</button>
-      <button  class='delete btn btn-danger'>delete</button>
-      <button  class="update btn btn-warning" style="display:none" >update</button>
-    </script>
-
-  <script id="noUsersView" type="text/template">
-      <h2>No Users</h2>
-    </script>
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>

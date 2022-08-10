@@ -1,20 +1,17 @@
 
 import App from 'components/App';
-import UserCollectionView from "./components/UserCollectionView"
-import UserCollection from './components/UserCollection'
-import FormView from './components/FormView'
+import UserView from './components/UserView'
+import UserModel from './components/UserModel'
 App.addRegions({
-  form: '#form',
-  list: '#list'
+  list:"#list"
 })
 App.addInitializer( function(){
-  App.users = new UserCollection();
-
-  const FormViewInstance = new FormView({ collection: App.users })
-  App.form.show(FormViewInstance);
-
-  const UserViewInstance = new UserCollectionView({ collection: App.users })
-  App.list.show(UserViewInstance);
+    var model =new UserModel({
+      name:'mohit',
+      age:23
+    })
+var userview=new UserView({model})
+App.list.show(userview)
 
 });
 App.start();
