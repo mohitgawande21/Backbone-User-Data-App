@@ -13,23 +13,40 @@
 </head>
 
 <body>
-  <h1>App</h1>
-  <div id="form"></div>
-  <div id="list"></div>
+  <h1 class="d-flex justify-content-center">Marionette App</h1>
+  <div id="form" class="d-flex justify-content-center"></div>
 
   <script id="userForm" type="text/template">
    <input type='text' id='name-input'>
    <br>
-   <input type='text' id='age-input'>
+   <input type='text' id='email-input'>
    <br>
-   <button type='button' id='add-btn' class="btn btn-primary">Add User</button>
+   <button type='button' id='add-btn' class="btn btn-primary w-100">Add User</button>
   </script>
   <br>
 
+  <!-- Name:<li>{{name}}</li>
+    email: <li>{{email}}</li> -->
+    <table class='table table-striped' >
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+    </table>
+    <table class='table table-striped'  id="list">
+    </table>
+    
   <script id="userView" type="text/template">
-  <li>{{name}}</li>
-  <li>{{age}}</li>
-  </script>
+      <td id='val-name'>{{name}}</td>
+      <td id='val-email'>{{email}}</td>
+      <td><button id='btn-edit' class='btn btn-danger'>Edit</button>
+      <button id='btn-update' class='btn btn-danger' style="display:none">Update</button>
+      <button id='btn-delete' class='btn btn-danger'>delete</button></td>
+
+    </script>
 
   <script src="app.js"></script>
 </body>
