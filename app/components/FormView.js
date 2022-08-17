@@ -4,9 +4,10 @@ var FormView = Marionette.ItemView.extend({
     id:'container',
     template: '#userForm',
     events: {
-        'click #add-btn': 'createUser'
+        'click #add-btn': 'createUser' 
     },
-    ui: {
+
+    ui: { 
         name: "#name-input",
         email: "#email-input"
     },

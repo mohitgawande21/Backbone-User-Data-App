@@ -7,7 +7,8 @@ export default Marionette.ItemView.extend({
     events: {
         'click #btn-delete': 'delete',
         'click #btn-edit': 'edit',
-        'click #btn-update': 'update'
+        'click #btn-update': 'update',
+        'click #btn-cancle': 'cancle'
     },
     delete: function () {
         console.log(this.$('#id-tr'))
@@ -27,6 +28,11 @@ export default Marionette.ItemView.extend({
         this.$('#btn-update').hide()
         this.$('#val-name').html($('#name-input').val())
         this.$('#val-email').html($('#email-input').val())
+        $('#name-input').val("")
+        $('#email-input').val("")
+    },
+    cancle:function(){
+        this.$('#btn-update').show()
     }
 
 });
